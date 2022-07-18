@@ -20,9 +20,9 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
   content: {
-    watch: {
-      ws: { port: 4000, showUrl: true },
-    },
+    // watch: {
+    //   ws: { port: 4000, showUrl: true },
+    // },
     locales: ['en', 'es'],
     defaultLocale: 'en',
     sources: ['content', {

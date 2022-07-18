@@ -5,7 +5,7 @@ export default {
   props:{
     heroBtns:{
       type:Array,
-      default:()=>([])
+      default:[]
     },
   },
   components: {
