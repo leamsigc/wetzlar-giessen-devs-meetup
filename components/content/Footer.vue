@@ -17,10 +17,10 @@ import SecondaryBtn from './SecondaryBtn.vue'
   <footer class="footer">
     <div class="container">
       <div class="card">
-        <h4 class="subtitle">
+        <h2 class="subtitle">
           In Wetzlar and into programing?
           <br>You need to join our meetup!
-        </h4>
+        </h2>
         <p class="card-content">
           Every
           <strong>3rd Wednesday of the month</strong> you’ll find us talking
@@ -32,7 +32,7 @@ import SecondaryBtn from './SecondaryBtn.vue'
         </div>
       </div>
       <img src="/logo/DuckLogo.svg" alt="Wetzlar developers meetup" width="200px" height="100px">
-      <NuxtLink i-carbon-campsite to="/" />
+      <NuxtLink aria-label="Go Home" i-carbon-campsite to="/" />
       <DarkToggle />
     </div>
   </footer>

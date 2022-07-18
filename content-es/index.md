@@ -9,7 +9,11 @@ mage:
     alt: 'Giessen and  Wezlar developer Group '  
     width: 400  
     height: 300
-head:  
+head:
+    htmlAttrs:
+        lang: 'es'
+    bodyAttrs:
+        class: 'Hello-from head'
     meta:    
         - name: 'keywords' 
         - content: 'Giessen  and Wetzlar developer meetup group'

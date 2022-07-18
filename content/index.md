@@ -4,13 +4,20 @@ description: 'We are a community of software developers in Wetzlar | Giessen, Ge
 draft: true
 navigation: true
 
+
+
 image:  
     src: '/assets/image.png'  
     alt: 'Giessen and  Wezlar developer Group '  
     width: 400  
     height: 300
-head:  
-    meta:    
+
+head:
+    htmlAttrs:
+        lang: 'en'
+    bodyAttrs:
+        class: ''
+    meta:
         - name: 'keywords' 
         - content: 'Giessen  and Wetzlar developer meetup group'
         - name: 'robots'
