@@ -1,0 +1,12 @@
+FROM node:16.15.1
+COPY . .
+RUN npm install -g pnpm
+RUN pnpm install
+RUN pnpm run build
+RUN npm install -g pm2
+
+COPY command.sh /usr/bin/
+
+CMD [ "command.sh" ]
+
+EXPOSE 3000
