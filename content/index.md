@@ -5,7 +5,7 @@ draft: true
 navigation: true
 
 mage:  
-    src: '/assets/image.jpg'  
+    src: '/assets/image.png'  
     alt: 'Giessen and  Wezlar developer Group '  
     width: 400  
     height: 300
