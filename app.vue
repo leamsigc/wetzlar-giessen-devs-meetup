@@ -1,4 +1,14 @@
 <script setup>
+useSchemaOrg([
+  // https://vue-schema-org.netlify.app/guide/guides/identity.html
+  // @todo select appropriate identity
+  // https://vue-schema-org.netlify.app/schema/website.html
+  defineWebSite({
+    name: 'Giessen and Wetzlar Developers meetup',
+  }),
+  // https://vue-schema-org.netlify.app/schema/webpage.html
+  defineWebPagePartial(),
+])
 </script>
 
 <template>
@@ -96,7 +106,12 @@ html, body , #__nuxt{
 }
 
 html.dark {
-  background: #222;
-  color: white;
+  --main-color: #001353;
+  --secondary-color: #f7f7f7;
+  --dark: #222;
+  --textbg-color: #e9ab00;
+  background: var(--main-color);
+  color: var(--dark);
+
 }
 </style>

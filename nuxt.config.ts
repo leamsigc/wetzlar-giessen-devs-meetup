@@ -8,6 +8,8 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@nuxt/content',
+    '@unlighthouse/nuxt',
+    'nuxt-schema-org',
   ],
   experimental: {
     reactivityTransform: true,
@@ -40,5 +42,16 @@ export default defineNuxtConfig({
     //   base: resolve(__dirname, 'content'), // Path for source directory
     // }
     ],
+  },
+  unlighthouse: {
+    scanner: {
+      // simulate a desktop device
+      device: 'mobile',
+    },
+
+  },
+  schemaOrg: {
+    // set to your production domain
+    canonicalHost: 'https://giessen.dev',
   },
 })

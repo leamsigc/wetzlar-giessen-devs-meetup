@@ -16,25 +16,27 @@
   <section class="section-sponsors">
     <div class="container">
       <h2 class="title">
-        <slot name="title"></slot>
+        <slot name="title" />
       </h2>
-      <p class="subtitle" >
-        <slot name="description"></slot>
+      <p class="subtitle">
+        <slot name="description" />
       </p>
-     <p class="subtitle">
-      <slot name="subTitle"></slot>
+      <p class="subtitle">
+        <slot name="subTitle" />
       </p>
       <div class="container-sponsors">
         <img
           class="sponsors-logos"
           src="/sponsors/reflectMedia.png"
           alt="Reflect medialogo"
+          width="200px" height="100px"
         >
-        <img class="sponsors-logos" src="/sponsors/atlasian.png" alt="atlasian">
+        <img class="sponsors-logos" src="/sponsors/atlasian.png" alt="atlasian" width="200px" height="100px">
         <img
           src="/sponsors/digitalOcean.png"
           alt="Digital ocean"
           class="sponsors-logos"
+          width="200px" height="100px"
         >
       </div>
     </div>

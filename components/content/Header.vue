@@ -2,7 +2,7 @@
   <header class="header">
     <div class="container">
       <div class="logo-container">
-        <img src="/logo/DuckLogo.svg" alt="Wetzlar developers logo">
+        <img src="/logo/DuckLogo.svg" alt="Wetzlar developers logo" width="200px" height="100px">
       </div>
       <nav class="nav">
         <ul class="nav--ul">

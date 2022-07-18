@@ -2,20 +2,20 @@
 import SecondaryBtn from './SecondaryBtn.vue'
 export default {
   name: 'Hero',
-  props:{
-    heroBtns:{
-      type:Array,
-      default:[]
-    },
-  },
   components: {
     SecondaryBtn,
+  },
+  props: {
+    heroBtns: {
+      type: Array,
+      default: () => ([]),
+    },
   },
   data() {
     return {
       heroStyle: {
         background: `linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6))
-        ,url(Wetzlar.png) no-repeat center bottom / cover`,
+        ,url(Wetzlar.jpg) no-repeat center bottom / cover`,
       },
     }
   },
@@ -23,14 +23,14 @@ export default {
 </script>
 
 <template>
-  <section class="section-hero" :style="heroStyle">
+  <section class="section-hero " :style="heroStyle">
     <div class="container">
       <div class="hero-title">
         <h1 class="title">
-          <slot name='title'></slot>
+          <slot name="title" />
         </h1>
         <p>
-          <slot name="description"></slot>
+          <slot name="description" />
         </p>
       </div>
       <div class="btn-container">
