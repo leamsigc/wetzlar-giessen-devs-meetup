@@ -1,6 +1,7 @@
 import { resolve } from 'path'
 import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
+  ssr: true,
   nitro: { prerender: { routes: ['/sitemap.xml'] } },
   modules: [
     '@vueuse/nuxt',
@@ -55,4 +56,5 @@ export default defineNuxtConfig({
     // set to your production domain
     canonicalHost: 'https://giessen.dev',
   },
+  // image: { dir: 'public/' },
 })
