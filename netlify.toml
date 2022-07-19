@@ -2,6 +2,9 @@
   NPM_FLAGS = "--version"
   NODE_VERSION = "16"
 
+[build]
+  publish = ".output/public"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
