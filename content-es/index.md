@@ -13,7 +13,7 @@ head:
     htmlAttrs:
         lang: 'es'
     bodyAttrs:
-        class: 'Hello-from head'
+        class: ''
     meta:    
         - name: 'keywords' 
         - content: 'Giessen  and Wetzlar developer meetup group'
