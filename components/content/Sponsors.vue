@@ -30,13 +30,15 @@
           src="/sponsors/reflectMedia.png"
           alt="Reflect medialogo"
           width="200px" height="100px"
+          loading="lazy" decoding="async"
         >
-        <img class="sponsors-logos" src="/sponsors/atlasian.png" alt="atlasian" width="200px" height="100px">
+        <img class="sponsors-logos" loading="lazy" decoding="async" src="/sponsors/atlasian.png" alt="atlasian" width="200px" height="100px">
         <img
           src="/sponsors/digitalOcean.png"
           alt="Digital ocean"
           class="sponsors-logos"
           width="200px" height="100px"
+          loading="lazy" decoding="async"
         >
       </div>
     </div>

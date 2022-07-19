@@ -42,7 +42,7 @@ export default {
 <template>
   <main class="main">
     <h2 class="title">
-     <slot name="title"></slot>
+      <slot name="title" />
     </h2>
     <section class="container">
       <div class="meetup--container">
