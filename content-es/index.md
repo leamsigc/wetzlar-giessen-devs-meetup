@@ -4,7 +4,7 @@ description: 'We are a community of software developers in Wetzlar | Giessen, Ge
 draft: true
 navigation: true
 
-mage:  
+image:  
     src: '/assets/image.png'  
     alt: 'Giessen and  Wezlar developer Group '  
     width: 400  
