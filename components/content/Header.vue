@@ -52,6 +52,8 @@
 }
 .logo-container img {
   display: block;
+  width:200px;
+
   max-height: 100px;
 }
 .nav {
