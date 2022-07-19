@@ -3,6 +3,7 @@
   "packageManager": "pnpm@7.5.0",
   "scripts": {
     "static": "nuxi generate",
+    "static-p": "nuxi preview",
     "static-nuxt": "nuxt generate",
     "static-preview": "nuxt preview",
     "build": "nuxi build",
