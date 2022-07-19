@@ -19,11 +19,20 @@ export default {
       },
     }
   },
+  computed: {
+    getStyles(): any {
+      const imgUrl = this.$img('Wetzlar.jpg')
+      return {
+        background: `linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6))
+        ,url('${imgUrl}') no-repeat center bottom / cover`,
+      }
+    },
+  },
 }
 </script>
 
 <template>
-  <section class="section-hero " :style="heroStyle">
+  <section class="section-hero " :style="getStyles">
     <div class="container">
       <div class="hero-title">
         <h1 class="title">

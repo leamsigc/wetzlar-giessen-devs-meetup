@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@unlighthouse/nuxt',
     'nuxt-schema-org',
+    '@nuxt/image-edge',
   ],
   experimental: {
     reactivityTransform: true,

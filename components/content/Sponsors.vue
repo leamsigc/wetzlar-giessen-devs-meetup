@@ -25,21 +25,35 @@
         <slot name="subTitle" />
       </p>
       <div class="container-sponsors">
-        <img
+        <nuxt-img
           class="sponsors-logos"
           src="/sponsors/reflectMedia.png"
           alt="Reflect medialogo"
           width="200px" height="100px"
           loading="lazy" decoding="async"
-        >
-        <img class="sponsors-logos" loading="lazy" decoding="async" src="/sponsors/atlasian.png" alt="atlasian" width="200px" height="100px">
-        <img
+          quality="90"
+          fit="outside"
+        />
+        <nuxt-img
+          quality="80"
+          fit="outside"
+          class="sponsors-logos"
+          loading="lazy"
+          decoding="async"
+          src="/sponsors/atlasian.png"
+          alt="atlasian"
+          width="300px"
+          height="200px"
+        />
+        <nuxt-img
           src="/sponsors/digitalOcean.png"
+          quality="90"
           alt="Digital ocean"
           class="sponsors-logos"
           width="200px" height="100px"
           loading="lazy" decoding="async"
-        >
+          fit="outside"
+        />
       </div>
     </div>
   </section>
