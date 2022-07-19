@@ -1,7 +1,7 @@
 import { resolve } from 'path'
 import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
-  // ssr: true,
+  // ssr: false,
   nitro: { prerender: { routes: ['/sitemap.xml'] } },
   modules: [
     '@vueuse/nuxt',

@@ -2,6 +2,7 @@
   "private": true,
   "packageManager": "pnpm@7.5.0",
   "scripts": {
+    "static":"nuxi generate",
     "build": "nuxi build",
     "dev": "nuxi dev",
     "start": "node .output/server/index.mjs",
