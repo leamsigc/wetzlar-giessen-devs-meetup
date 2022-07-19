@@ -21,7 +21,7 @@ export default {
   },
   computed: {
     getStyles(): any {
-      const imgUrl = this.$img('Wetzlar.jpg')
+      const imgUrl = 'Wetzlar.jpg'
       return {
         background: `linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6))
         ,url('${imgUrl}') no-repeat center bottom / cover`,

@@ -27,15 +27,16 @@ export default {
 
 <template>
   <article class="meetup-item" relative>
-    <nuxt-picture
+    <picture
       class="image-container"
       opacity="80"
       :src="item.imgUrl"
       quality="80"
       :img-attrs="{ class: 'object-cover absolute inset-0 w-full h-full' }"
-    />
-    <!-- <source :srcset="item.imgUrl" media="(min-width: 600px)"> -->
-    <!-- <img object-cover absolute inset-0 w-full h-full :src="item.imgUrl" :alt="item.title" height="600" width="600" loading="lazy" decoding="async"> -->
+    >
+      <source :srcset="item.imgUrl" media="(min-width: 600px)">
+      <img object-cover absolute inset-0 w-full h-full :src="item.imgUrl" :alt="item.title" height="600" width="600" loading="lazy" decoding="async">
+    </picture>
     <div z-10>
       <h3 class="meetup-item__title">
         {{ item.title }}

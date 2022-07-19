@@ -31,7 +31,7 @@ import SecondaryBtn from './SecondaryBtn.vue'
           <SecondaryBtn text-content="Join Our Slack " />
         </div>
       </div>
-      <nuxt-img src="/logo/DuckLogo.svg" alt="Wetzlar developers meetup" width="200px" height="100px" loading="lazy" decoding="async" quality="80" />
+      <img src="/logo/DuckLogo.svg" alt="Wetzlar developers meetup" width="200px" height="100px" loading="lazy" decoding="async" quality="80">
       <NuxtLink aria-label="Go Home" i-carbon-campsite to="/" />
       <DarkToggle />
     </div>
