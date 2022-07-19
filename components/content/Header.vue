@@ -1,25 +1,47 @@
+<script lang="ts" setup>
+/**
+ *
+ * Component Description:Desc
+ *
+ * @author Reflect-Media <reflect.media GmbH>
+ * @version 0.0.1
+ *
+ * @todo [ ] Test the component
+ * @todo [ ] Integration test.
+ * @todo [✔] Update the typescript.
+ */
+interface NAV_ITEM {
+  title: string
+  _path: string
+  navLabel: string
+  layout: string
+}
+const nav = ref<NAV_ITEM[]>([])
+const { data }: { data: { value: unknown | NAV_ITEM[] } } = await useAsyncData('navigation', () => {
+  return fetchContentNavigation()
+})
+nav.value = data.value as NAV_ITEM[]
+</script>
+
 <template>
   <header class="header">
     <div class="container">
       <div class="logo-container">
-        <img src="/logo/DuckLogo.svg" preload alt="Wetzlar developers logo" width="200px" height="100px" loading="eager" decoding="async">
+        <NuxtLink class="nav--link" to="/">
+          <img src="/logo/DuckLogo.svg" preload alt="Wetzlar developers logo" width="200px" height="100px" loading="eager" decoding="async">
+        </NuxtLink>
       </div>
       <nav class="nav">
         <ul class="nav--ul">
           <li class="nav--li">
-            <router-link class="nav--link" to="/">
+            <NuxtLink class="nav--link" to="/">
               Home
-            </router-link>
+            </NuxtLink>
           </li>
-          <li class="nav--li">
-            <router-link class="nav--link" to="/about">
-              About
-            </router-link>
-          </li>
-          <li class="nav--li">
-            <router-link class="nav--link" to="/about">
-              Sponsor Us
-            </router-link>
+          <li v-for="link in nav" :key="link._path" class="nav--li">
+            <NuxtLink class="nav--link" :to="`${link._path}`">
+              {{ link.navLabel }}
+            </NuxtLink>
           </li>
           <li class="nav--li">
             <a href="#" class="btn btn-main">Join slack</a>

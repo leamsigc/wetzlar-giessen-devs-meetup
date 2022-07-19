@@ -1,4 +1,6 @@
 ---
+layout: 'default'
+navLabel: 'Blogs'
 title: 'Giessen and Wetzlar Developers meetup'
 description: 'We are a community of software developers in Wetzlar | Giessen, Germany. Whether you love writing code or are just getting started, you are welcome here! '
 draft: true

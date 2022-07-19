@@ -7,6 +7,7 @@
     "*.css": "postcss"
   },
   "editor.formatOnSave": false,
-  "unocss.root": "packages/client"
+  "unocss.root": "packages/client",
+  "vue3snippets.enable-compile-vue-file-on-did-save-code": false
 
 }

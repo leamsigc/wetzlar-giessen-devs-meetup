@@ -42,6 +42,7 @@ export default {
         {{ item.title }}
       </h3>
       <small class="meetup-item__date">{{ item.date }}</small>
+      <slot name="description" />
     </div>
   </article>
 </template>

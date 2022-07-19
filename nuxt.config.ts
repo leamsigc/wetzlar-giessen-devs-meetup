@@ -1,7 +1,8 @@
 import { resolve } from 'path'
 import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
-  // ssr: false,
+  ssr: true,
+  target: 'static',
   nitro: { prerender: { routes: ['/sitemap.xml'] } },
   modules: [
     '@vueuse/nuxt',
@@ -24,18 +25,28 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
   content: {
+    documentDriven: {
+      layoutFallbacks: ['default'],
+    },
+    highlight: {
+      // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
+      theme: 'dracula'
+    },
+     navigation: {
+      fields: ['navLabel']
+    },
     // watch: {
     //   ws: { port: 4000, showUrl: true },
     // },
-    locales: ['en', 'es'],
-    defaultLocale: 'en',
-    sources: ['content', {
-      name: 'es',
-      prefix: '/es',
-      // All contents inside this source will be prefixed with `/fa`
-      driver: 'fs', // ...driverOptions
-      base: resolve(__dirname, 'content-es'), // Path for source directory
-    },
+    // locales: ['en', 'es'],
+    // defaultLocale: 'en',
+    // sources: ['content', {
+    //   name: 'es',
+    //   prefix: '/es',
+    //   // All contents inside this source will be prefixed with `/fa`
+    //   driver: 'fs', // ...driverOptions
+    //   base: resolve(__dirname, 'content-es'), // Path for source directory
+    // },
     // {
     //   name: 'en',
     //   prefix: '',
@@ -43,7 +54,7 @@ export default defineNuxtConfig({
     //   driver: 'fs', // ...driverOptions
     //   base: resolve(__dirname, 'content'), // Path for source directory
     // }
-    ],
+    // ],
   },
   unlighthouse: {
     scanner: {

@@ -1,1 +1,0 @@
-import{_ as e,o as n,c as o,t as a}from"./entry-e3d3d4e3.mjs";const r={name:"SecondaryBtn",props:{textContent:{type:String,default:null}}},s={href:"#",class:"btn btn-secondary"};function c(_,p,t,l,d,f){return n(),o("a",s,a(t.textContent),1)}var u=e(r,[["render",c]]);export{u as default};
