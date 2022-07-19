@@ -4,8 +4,5 @@
 
 [build]
   publish = ".output/public"
+  command = "npm run static"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
