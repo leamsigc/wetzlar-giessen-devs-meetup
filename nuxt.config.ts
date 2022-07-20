@@ -27,13 +27,17 @@ export default defineNuxtConfig({
   content: {
     documentDriven: {
       layoutFallbacks: ['default'],
+      navigation: true,
+      page: true,
+      surround: true,
+      injectPage: true,
     },
     highlight: {
       // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
-      theme: 'dracula'
+      theme: 'dracula',
     },
-     navigation: {
-      fields: ['navLabel']
+    navigation: {
+      fields: ['navLabel'],
     },
     // watch: {
     //   ws: { port: 4000, showUrl: true },

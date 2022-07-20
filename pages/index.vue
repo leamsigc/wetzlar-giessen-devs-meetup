@@ -12,7 +12,6 @@
  */
 import Meetup from '~~/components/content/Meetup.vue'
 const blogs = await queryContent('blogs').limit(5).find()
-const hero = await queryContent('_partials').where({ _partial: true })
 const { data } = await useAsyncData('hero', () =>
   queryContent('_partials', '_hero').findOne(),
 )
@@ -25,6 +24,7 @@ definePageMeta({
 <template>
   <main>
     <ContentRenderer :value="data">
+      <ContentRendererMarkdown :value="data" unwrap="p" />
       <template #empty>
         <p>No content found.</p>
       </template>
