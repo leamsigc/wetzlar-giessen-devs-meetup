@@ -12,11 +12,11 @@ useSchemaOrg([
 </script>
 
 <template>
-<main>
-  <NuxtLayout >
-    <NuxtPage />
-  </NuxtLayout>
-</main>
+  <main>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </main>
 </template>
 
 <style>

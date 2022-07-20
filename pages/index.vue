@@ -18,6 +18,7 @@ const { data } = await useAsyncData('hero', () =>
 )
 definePageMeta({
   layout: 'home',
+  documentDriven: false,
 })
 </script>
 
