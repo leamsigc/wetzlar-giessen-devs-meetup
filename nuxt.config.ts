@@ -1,4 +1,4 @@
-import { resolve } from 'path'
+// import { resolve } from 'path'
 import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
   ssr: true,
@@ -25,17 +25,17 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
   content: {
-    documentDriven: {
-      layoutFallbacks: ['default'],
-      navigation: true,
-      page: true,
-      surround: true,
-      injectPage: true,
-    },
-    highlight: {
-      // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
-      theme: 'dracula',
-    },
+    // documentDriven: {
+    //   layoutFallbacks: ['default'],
+    //   navigation: true,
+    //   page: true,
+    //   surround: true,
+    //   injectPage: true,
+    // },
+    // highlight: {
+    //   // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
+    //   theme: 'dracula',
+    // },
     navigation: {
       fields: ['navLabel'],
     },

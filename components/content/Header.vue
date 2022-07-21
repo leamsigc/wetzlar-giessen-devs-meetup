@@ -38,6 +38,11 @@ nav.value = data.value as NAV_ITEM[]
               Home
             </NuxtLink>
           </li>
+          <li class="nav--li">
+            <NuxtLink class="nav--link" to="/about">
+              About
+            </NuxtLink>
+          </li>
           <li v-for="link in nav" :key="link._path" class="nav--li">
             <NuxtLink class="nav--link" :to="`${link._path}`">
               {{ link.navLabel }}

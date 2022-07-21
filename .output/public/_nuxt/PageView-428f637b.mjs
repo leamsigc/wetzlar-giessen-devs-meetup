@@ -1,1 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper-84c1d017.mjs";import{o as r,b as t}from"./entry-7f00af1d.mjs";const o={},c={"text-gray:80":""};function a(s,n){return r(),t("div",c," page views since ")}var f=e(o,[["render",a]]);export{f as default};
