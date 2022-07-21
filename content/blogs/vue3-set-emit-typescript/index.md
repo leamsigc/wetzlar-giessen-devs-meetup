@@ -8,7 +8,7 @@ navigation: false
 
 image:  
     src: '/image.png'  
-    alt: 'Giessen and  Wezlar developer Group '  
+    alt: 'vue3 how to set a emit defined? '  
     width: 400  
     height: 300
 
@@ -19,7 +19,7 @@ head:
         class: ''
     meta:
         - name: 'keywords' 
-        - content: 'Giessen  and Wetzlar developer meetup group'
+        - content: 'Giessen  and Wetzlar developer meetup group,vue3 how to set a emit defined?'
         - name: 'robots'
         - content: 'index, follow'    
         - name: 'author'      

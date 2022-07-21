@@ -10,11 +10,12 @@
  * @todo [ ] Integration test.
  * @todo [✔] Update the typescript.
  */
-import Meetup from '~~/components/content/Meetup.vue'
 const blogs = await queryContent('blogs').limit(5).find()
 const { data } = await useAsyncData('hero', () =>
   queryContent('_partials', '_hero').findOne(),
 )
+
+useHead({ ...data.value.head, title: data.value.title })
 definePageMeta({
   layout: 'home',
   documentDriven: false,
