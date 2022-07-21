@@ -1,5 +1,5 @@
 ---
-layout: 'default'
+layout: 'blog'
 title: 'vue3 how to set a emit defined?'
 description: ' vue3 how to set a emit defined?, composition api how to set a emit defined?, typescript vue3  set a emit defined?'
 draft: false
@@ -16,7 +16,7 @@ head:
     htmlAttrs:
         lang: 'en'
     bodyAttrs:
-        class: ''
+        class: 'text-white'
     meta:
         - name: 'keywords' 
         - content: 'Giessen  and Wetzlar developer meetup group,vue3 how to set a emit defined?'
@@ -27,16 +27,14 @@ head:
 
 ---
 
-# [ Question how to set a emit defined?]{.text-white}
-- [vue3 how to set a emit defined?]{.text-white}
-- [typescript vue3  set a emit defined?]{.text-white}
-- [composition api how to set a emit defined?]{.text-white}
+<h1 text-lg font-bold mb-4> Question how to set a emit defined?</h1>
 
+- vue3 how to set a emit defined?
+- typescript vue3  set a emit defined?
+- composition api how to set a emit defined?
 
-<pre class='text-white py-5'>
-<code>
-
+```javascript
 const $emit = defineEmits<{ (e: 'close-edit-form'): void }>()
 
-</code>
-</pre>
+
+```

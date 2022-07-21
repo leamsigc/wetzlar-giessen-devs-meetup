@@ -15,6 +15,7 @@
 <template>
   <main class="text-center">
     <Header />
+
     <section>
       <slot />
     </section>

@@ -37,7 +37,9 @@ definePageMeta({
           :key="blog._path"
           class="rounded p-unset py-1 px-3 text-white relative bg-gray-900 flex flex-col transition transform-gpu hover:scale-110"
         >
-          <h3>{{ blog.title }}</h3>
+          <h3 text-lg font-bold>
+            {{ blog.title }}
+          </h3>
           <p class="text-gray-300 text-base mb-4 text-xs flex-1">
             {{ blog.description }}
           </p>

@@ -1,8 +1,7 @@
 <template>
-  <main>
+  <main bg-gray-900>
     <Header />
-
-    <section>
+    <section mx-auto py-24 prose>
       <slot />
     </section>
     <Footer />
