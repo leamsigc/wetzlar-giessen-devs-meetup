@@ -16,7 +16,7 @@ head:
     htmlAttrs:
         lang: 'en'
     bodyAttrs:
-        class: 'text-white'
+        class: ''
     meta:
         - name: 'keywords' 
         - content: 'Giessen  and Wetzlar developer meetup group,vue3 how to set a emit defined?'
@@ -38,3 +38,5 @@ const $emit = defineEmits<{ (e: 'close-edit-form'): void }>()
 
 
 ```
+
+
