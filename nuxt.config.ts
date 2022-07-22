@@ -1,5 +1,6 @@
 // import { resolve } from 'path'
 import { defineNuxtConfig } from 'nuxt'
+
 export default defineNuxtConfig({
   ssr: true,
   // target: 'static',
@@ -25,16 +26,21 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
   content: {
-    documentDriven: {
-      layoutFallbacks: ['default'],
-      navigation: true,
-      page: true,
-      surround: true,
-      injectPage: true,
-    },
+    // documentDriven: {
+    //   layoutFallbacks: ['default'],
+    //   navigation: true,
+    //   page: true,
+    //   surround: true,
+    //   injectPage: true,
+    // },
     highlight: {
       // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
-      theme: 'dracula',
+      theme: {
+        white: 'github-light', // Theme used if `html.dark`
+        dark: 'github-dark', // Theme used if `html.sepia`
+        default: 'monokai',
+      },
+      preload: ['tsx', 'json', 'sh', 'js'],
     },
     navigation: {
       fields: ['navLabel'],

@@ -10,16 +10,21 @@
  * @todo [ ] Integration test.
  * @todo [✔] Update the typescript.
  */
+const r = useRoute()
+const layout = ref<string>('blog')
+
+layout.value = r.params.slug ? 'blog' : 'default'
+
 definePageMeta({
-  layout: false,
   documentDriven: false,
+  layout: false,
 })
 </script>
 
 <template>
   <main>
-    <NuxtLayout layout="blog">
-      <ContentDoc :path="$route.params.slug ? `/blogs/${$route.params.slug[0]}` : '/blogs'" :excerpt="true">
+    <NuxtLayout :name="layout">
+      <ContentDoc :path="$route.params.slug ? `/blogs/${$route.params.slug[0]}` : '/blogs'"  >
         <template #not-found>
           <page-not-found />
         </template>

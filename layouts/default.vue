@@ -13,9 +13,8 @@
 </script>
 
 <template>
-  <main class="text-center">
+  <main text-center >
     <Header />
-
     <section>
       <slot />
     </section>
