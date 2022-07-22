@@ -19,9 +19,9 @@ useSchemaOrg([
   </main>
 </template>
 
-<style>
+<style lang="scss">
 :root {
-  --main-color: #111827;
+  --main-color: #001353;
   --secondary-color: #f7f7f7;
   --textbg-color: #e9ab00;
   --main-font-family: "Montserrat";
@@ -40,15 +40,12 @@ body {
   font-weight: 300;
   line-height: 1.5;
 
-@media (max-width: 800px) {
-  font-size:
-
-15px
-
-;
-}
+  @media (max-width: 800px) {
+    font-size: 15px;
+  }
 
 }
+
 #app {
   font-family: var(--main-font-family), "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -126,7 +123,7 @@ html, body, #__nuxt {
 }
 
 html.dark {
-  --main-color: #001353;
+  --main-color: #111827;
   --secondary-color: #f7f7f7;
   --dark: #222;
   --textbg-color: #e9ab00;
