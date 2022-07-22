@@ -15,7 +15,6 @@
     "@antfu/eslint-config": "^0.25.2",
     "@iconify-json/carbon": "^1.1.6",
     "@iconify-json/twemoji": "^1.1.5",
-    
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@nuxt/image-edge": "1.0.0-27628766.3629b9a",
     "@nuxtjs/color-mode": "^3.1.4",
@@ -24,7 +23,6 @@
     "@unocss/nuxt": "^0.44.3",
     "@vueuse/nuxt": "^8.9.4",
     "eslint": "^8.19.0",
-   
     "nuxt": "npm:nuxt3@latest",
     "nuxt-schema-org": "0.7.0-beta.3",
     "pinia": "^2.0.16",

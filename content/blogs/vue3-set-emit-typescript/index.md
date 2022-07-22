@@ -34,9 +34,8 @@ head:
 - composition api how to set a emit defined?
 
 ```javascript
+
 const $emit = defineEmits<{ (e: 'close-edit-form'): void }>()
 
 
 ```
-
-

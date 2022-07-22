@@ -36,11 +36,9 @@ export default {
     <div class="container">
       <div class="hero-title">
         <h1 class="title">
-          <slot name="title" />
+          <Markdown :use="$slots.title" unwrap="p" />
         </h1>
-        <p>
-          <slot name="description" />
-        </p>
+        <slot name="description" />
       </div>
       <div class="btn-container">
         <SecondaryBtn v-for="btn in heroBtns" :key="btn" :text-content="btn" />

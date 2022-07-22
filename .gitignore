@@ -2,7 +2,8 @@ node_modules
 *.log
 dist
 .output
-
+.output/*
 .nuxt
 .env
 .unlighthouse
+.idea

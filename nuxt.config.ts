@@ -2,12 +2,12 @@
 import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
   ssr: true,
-  target: 'static',
+  // target: 'static',
   nitro: { prerender: { routes: ['/sitemap.xml'] } },
   modules: [
     '@vueuse/nuxt',
     '@unocss/nuxt',
-    '@pinia/nuxt',
+    // '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@nuxt/content',
     '@unlighthouse/nuxt',

@@ -14,18 +14,20 @@ const { data } = await useAsyncData('about', () =>
   queryContent('_partials', '_about').findOne(),
 )
 definePageMeta({
-  layout: 'home',
+  layout: false,
   documentDriven: false,
 })
 </script>
 
 <template>
   <main>
-    <ContentRenderer :value="data">
-      <ContentRendererMarkdown :value="data" unwrap="p" />
-      <template #empty>
-        <p>No content found.</p>
-      </template>
-    </ContentRenderer>
+    <NuxtLayout layout="home">
+      <ContentRenderer :value="data">
+        <ContentRendererMarkdown :value="data" unwrap="p" />
+        <template #empty>
+          <p>No content found.</p>
+        </template>
+      </ContentRenderer>
+    </NuxtLayout>
   </main>
 </template>
