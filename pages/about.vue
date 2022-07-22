@@ -13,6 +13,11 @@
 const { data } = await useAsyncData('about', () =>
   queryContent('_partials', '_about').findOne(),
 )
+
+useHead({
+  ...data.value.head,
+  title: data.value.title,
+})
 definePageMeta({
   documentDriven: false,
 })

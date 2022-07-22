@@ -20,12 +20,12 @@ head:
     bodyAttrs:
         class: ''
     meta:
-        - name: 'keywords' 
-        - content: 'Giessen  and Wetzlar developer meetup group'
-        - name: 'robots'
-        - content: 'index, follow'    
-        - name: 'author'      
-        - content: 'Leamsigc'
+        -   name: 'keywords' 
+            content: 'We are a community of software developers in Wetzlar | Giessen, Germany. Whether you love writing code or are just getting started, you are welcome here!'
+        -   name: 'robots'
+            content: 'index, follow'    
+        -   name: 'author'      
+            content: 'Leamsigc'
 
 ---
 
