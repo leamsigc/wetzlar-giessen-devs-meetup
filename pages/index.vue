@@ -33,12 +33,12 @@ definePageMeta({
         <p>No content found.</p>
       </template>
     </ContentRenderer>
-    <div class="container p-y-10">
-      <div class="grid md:grid-cols-4 gap-4">
+    <div class="container p-y-10 px-4 lg:px-unset">
+      <div class="grid md:grid-cols-4 gap-4 gap-y-8 lg:gap-y-4">
         <article
           v-for="blog in blogs"
           :key="blog._path"
-          class="rounded p-unset py-1 px-3 text-white relative bg-gray-900 flex flex-col transition transform-gpu hover:scale-110"
+          class="rounded p-unset py-1 px-3 text-white relative bg-gray-900 flex flex-col transition transform-gpu lg:hover:scale-110 h-52"
         >
           <h3 text-lg font-bold>
             {{ blog.title }}
@@ -52,9 +52,10 @@ definePageMeta({
           <picture
             v-if="blog.image"
             class="image-container -z-10"
-            opacity="50"
+            opacity="10"
             :src="blog.image.src"
             quality="80"
+            rounded
             :img-attrs="{ class: 'object-cover absolute inset-0 w-full h-full' }"
           >
             <source :srcset="blog.image.src" media="(min-width: 600px)">
