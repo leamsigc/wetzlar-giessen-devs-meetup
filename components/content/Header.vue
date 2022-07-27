@@ -44,7 +44,7 @@ const HandleToggleMenu = () => {
 
 <template>
   <header class="header" p-3 lg:p-1>
-    <div grid container lg:grid-cols-4>
+    <div grid container lg:grid-cols-4 mx-auto>
       <div grid grid-cols-3 gap-x-4 lg:col-span-2>
         <NuxtLink class="nav--link" to="/" col-span-2 text-left>
           <img src="/logo/DuckLogo.svg" preload alt="Wetzlar developers logo" width="200px" height="100px" loading="eager" decoding="async" class="w-[150px] h-16 lg:h-12">

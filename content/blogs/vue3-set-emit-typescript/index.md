@@ -27,7 +27,31 @@ head:
 
 ---
 
-<h1 text-lg font-bold mb-4> Question how to set an emit defined?</h1>
+::blogHero
+---
+imageUrl: '/image.png'
+
+---
+
+#title
+How to set up and emit event with typescript and the new vue3 composition api
+
+#descriptionSmall
+In this simple tutorial or less than a tutorial i will explain you how to strongly type your emit event with the ner composition api from vue3
+
+#username
+Ismael Garcia
+
+#date
+Wed,27,Jul
+
+
+#description
+Question how to set an emit defined?,3. Vue3 composition api how to set an  emit event  defined in setup script?
+
+::
+
+<h2 text-lg font-bold mb-4> Question how to set an emit defined?</h2>
 
 
 > How to declare a emit event in typescript and vue3
@@ -45,7 +69,6 @@ head:
 ```ts
 const $emit = defineEmits<{ (e: 'close-edit-form'): void }>()
 
-
 ```
 
 
@@ -53,6 +76,6 @@ const $emit = defineEmits<{ (e: 'close-edit-form'): void }>()
 
 ```tsx
 export default () => {
-    console.log('Code block')
+  console.log('Code block')
 }
 ```

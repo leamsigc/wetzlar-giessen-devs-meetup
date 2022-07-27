@@ -14,9 +14,9 @@
 
 <template>
   <div class="card prose" static lg:absolute>
-    <h3 class="subtitle mt-unset">
+    <h2 class="subtitle mt-unset">
       <Markdown :use="$slots.title" unwrap="p" />
-    </h3>
+    </h2>
     <p class="card-content">
       <Markdown :use="$slots.content" unwrap="p" />
     </p>
