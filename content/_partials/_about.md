@@ -37,7 +37,7 @@ We are a community of software developers in Giessen-Wetzlar, Germany. Whether y
 ::
 
 
-<div class='max-w-4xl mx-auto py-6' max-w-5xl>
+<div class='max-w-4xl mx-auto py-6 dark:text-white' max-w-5xl>
 
 <h3 class='font-bold text-lg mb-3'>
 We're a community of software developers in Giessen-Wetzlar!  <br/>We host professional networking and learning events for developers seeking to grow
