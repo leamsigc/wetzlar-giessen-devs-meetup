@@ -7,3 +7,7 @@
     <Footer />
   </main>
 </template>
+
+<style>
+
+</style>

@@ -33,8 +33,8 @@ definePageMeta({
         <p>No content found.</p>
       </template>
     </ContentRenderer>
-    <div class="container p-y-10 px-4 lg:px-unset">
-      <div class="grid md:grid-cols-4 gap-4 gap-y-8 lg:gap-y-4">
+    <div class="container p-y-10 px-4 xl:px-unset">
+      <div class="grid md:grid-cols-3 gap-4 gap-y-8 lg:gap-y-4 ">
         <article
           v-for="blog in blogs" :key="blog._path"
           class="rounded p-unset  relative flex flex-col transition transform-gpu lg:hover:scale-110  shadow dark:bg-gray-700 dark:text-white"
@@ -49,17 +49,17 @@ definePageMeta({
               width="600" loading="lazy" decoding="async"
             >
           </picture>
-          <div class="px-2 pt-2 flex flex-col">
+          <div class="px-2 pt-2 flex flex-col flex-1">
             <h2 text-lg font-bold uppercase text-gray-400>
               {{ blog.title }}
             </h2>
             <p class=" text-base my-3 flex-1 opacity-55 ">
               {{ blog.description }}
             </p>
-            <Nuxt-link :to="blog._path" class="  hover:bg-transparent hover:text-green hover:shadow-none ">
-              Read More
-            </Nuxt-link>
           </div>
+          <Nuxt-link :to="blog._path" class="  hover:bg-transparent hover:text-green hover:shadow-none px-4 py-2">
+            Read More
+          </Nuxt-link>
         </article>
       </div>
     </div>

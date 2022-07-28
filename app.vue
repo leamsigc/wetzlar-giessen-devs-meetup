@@ -14,7 +14,7 @@ useSchemaOrg([
 <template>
   <main>
     <NuxtLayout>
-      <NuxtPage/>
+      <NuxtPage />
     </NuxtLayout>
   </main>
 </template>
@@ -25,6 +25,12 @@ useSchemaOrg([
   --secondary-color: #f7f7f7;
   --textbg-color: #e9ab00;
   --main-font-family: "Montserrat";
+
+// --main-color: var(--lt-color-gray-400);
+--main--strongColor: var(--textbg-color);
+--secondary-color: var(--lt-color-gray-600);
+--color--white: var(--lt-color-gray-100);
+--color--body: #fafafa;
 }
 
 * {
@@ -130,5 +136,8 @@ html.dark {
   background: var(--main-color);
   color: var(--dark);
 
+}
+.bg-dots{
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4"%3E%3Cpath fill="%239C92AC" fill-opacity="0.4" d="M1 3h1v1H1V3zm2-2h1v1H3V1z"%3E%3C/path%3E%3C/svg%3E');
 }
 </style>

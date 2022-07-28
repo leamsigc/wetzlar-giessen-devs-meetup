@@ -13,7 +13,7 @@
 </script>
 
 <template>
-  <main class="main">
+  <main class="main bg-dots">
     <div class="cards">
       <div class="card">
         <div class="card__container">
@@ -52,9 +52,6 @@
             </div>
           </div>
         </div>
-        <button class="button" data-js="card__btn">
-          See Example
-        </button>
       </div>
       <div class="card">
         <div class="card__container">
@@ -93,9 +90,6 @@
             </div>
           </div>
         </div>
-        <button class="button" data-js="card__btn">
-          See Example
-        </button>
       </div>
       <div class="card">
         <div class="card__container">
@@ -134,31 +128,19 @@
             </div>
           </div>
         </div>
-        <button class="button" data-js="card__btn">
-          See Example
-        </button>
       </div>
     </div>
   </main>
 </template>
 
 <style scoped lang="scss">
-@import "https://fonts.googleapis.com/css?family=Poppins:400,500,700";
-
 .main {
---main-color: #a6aad8;
---main--strongColor: #5e4fed;
---secondary-color: #3c4363;
---color--white: #d4daea;
---color--body: #fafafa;
---main-fontFamily: "Poppins", sans-serif;
-background: var(--color-body);
-  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4"%3E%3Cpath fill="%239C92AC" fill-opacity="0.4" d="M1 3h1v1H1V3zm2-2h1v1H3V1z"%3E%3C/path%3E%3C/svg%3E');
+// background: var(--color-body);
+  // background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4"%3E%3Cpath fill="%239C92AC" fill-opacity="0.4" d="M1 3h1v1H1V3zm2-2h1v1H3V1z"%3E%3C/path%3E%3C/svg%3E');
   min-height: 100vh;
 }
 .cards {
   max-width: 1200px;
-  // background: rgba(#000, 0.3);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: minmax(360px, max-content);
@@ -174,7 +156,6 @@ background: var(--color-body);
   }
 }
 .card {
-  font-family: var(--main-fontFamily);
   position: relative;
   &__container {
     position: relative;
@@ -185,31 +166,13 @@ background: var(--color-body);
   }
   &:hover &__container {
     transform: perspective(500px) rotateY(180deg);
+    // transform: rotateY(180deg);
     .card__front {
       opacity: 0;
     }
     .card__back {
       opacity: 1;
-    //   transform: perspective(400px) rotateY(260deg);
-    }
-  }
-  .button {
-    position: absolute;
-    bottom: 0;
-    display: block;
-    width: 100%;
-    font-family: var(--main-fontFamily);
 
-    margin: 2rem 0.5rem;
-    border: 2px solid var(--main--strongColor);
-    background: var(--color--white);
-    padding: 1rem 1rem;
-    font-weight: 500;
-    font-size: 1.1rem;
-    box-shadow: 0.5rem 0.5rem var(--main-color);
-    transition: all 0.3s ease-in-out;
-    &:hover {
-      transform: scale(1.07) translateY(-0.3rem);
     }
   }
   &__front.active {
@@ -218,16 +181,12 @@ background: var(--color-body);
   &__front,
   &__back {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 7rem;
- opacity: 1;
+    inset: 0;
+    opacity: 1;
 
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     transition: all 0.5s ease-in-out;
-    &:hover {
-      transform: translateY(-0.2rem) scale(1.005);
-    }
     font-weight: 400;
     box-shadow: 0.5rem 0.5rem var(--main-color);
 
@@ -257,31 +216,19 @@ background: var(--color-body);
     &--main {
       padding: 2rem 1rem;
       line-height: 1.5;
-      h2 {
-        font-size: 2rem;
-        font-weight: 700;
-        letter-spacing: 3px;
-        margin-bottom: 2rem;
-      }
-      ol {
-        padding: 1rem;
-        li {
-          padding: 0.3rem 0.5rem;
-        }
-      }
     }
   }
   &__back {
     transform: perspective(500px) rotateY(180deg);
-    backface-visibility: hidden;
     z-index: 1;
     transition: all 0.5s ease-in-out;
     opacity:0;
     code {
       display: block;
-      background: var(--main-color);
+      background: var(--secondary-color);
       padding: 1rem 0.5rem;
       font-weight: 900;
+      font-size: inherit;
       font-style: italic;
     }
     &--main {

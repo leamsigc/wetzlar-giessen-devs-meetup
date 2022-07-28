@@ -51,7 +51,52 @@ Question how to set an emit defined?,3. Vue3 composition api how to set an  emit
 
 ::
 
-<h2 text-lg font-bold mb-4> Question how to set an emit defined?</h2>
+<div class='grid grid-cols-1 mt-4'>
+
+::CardExamples
+---
+tagLabel: "Vuejs"
+---
+
+
+#contentFront
+#### Set props interface vue3
+While working with vue-3 and typescript we always need to define the props types,like if we have  card and that card component need a couple of porps right like title, sub-title, content
+```ts
+interface propsInterface {
+  bannerLabel: string
+  bannerLabelBack: string
+  tagLabel: string
+}
+```
+
+#contentBack
+#### Here is small an  example
+
+```ts
+<script lang="ts" setup>
+interface propsInterface {
+  bannerLabel: string
+  bannerLabelBack: string
+  tagLabel: string
+}
+
+const props = withDefaults(defineProps<propsInterface>(), {
+  bannerLabel: 'Explainer',
+  tagLabel: 'Typescript',
+  bannerLabelBack: 'Example',
+})
+const { bannerLabel, tagLabel, bannerLabelBack } = props
+</script>
+
+```
+::
+</div>
+
+
+
+
+<p text-lg font-bold mb-4> Question how to set an emit defined?</p>
 
 
 > How to declare a emit event in typescript and vue3
