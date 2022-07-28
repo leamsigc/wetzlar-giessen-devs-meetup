@@ -28,7 +28,7 @@ useSchemaOrg([
 
 // --main-color: var(--lt-color-gray-400);
 --main--strongColor: var(--textbg-color);
---secondary-color: var(--lt-color-gray-600);
+// --secondary-color: var(--lt-color-gray-600);
 --color--white: var(--lt-color-gray-100);
 --color--body: #fafafa;
 }

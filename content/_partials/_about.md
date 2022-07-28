@@ -33,5 +33,18 @@ head:
 #title
 About the meetup group
 #description
-We are a community of software developers in Wetzlar | Giessen, Germany. Whether you love writing code or are just getting started, you are welcome here!
+We are a community of software developers in Giessen-Wetzlar, Germany. Whether you love writing code or are just getting started, you are welcome here!
 ::
+
+
+<div class='max-w-4xl mx-auto py-6' max-w-5xl>
+
+<h3 class='font-bold text-lg mb-3'>
+We're a community of software developers in Giessen-Wetzlar!  <br/>We host professional networking and learning events for developers seeking to grow
+</h3>
+
+
+<div class='px-4 py-3'>
+Giessen-Wetzlar Devs started as a group of developers for exchanging ideas. <br/> It became large enough that one friend decided to make it official. <br/>Thus Giessen-Wetzlar Devs was born. We're welcoming to all, <br/>whether your transitioning into the tech scene, <br/>or are already a seasoned developer
+</div>
+</div>

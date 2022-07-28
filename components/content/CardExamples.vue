@@ -55,6 +55,8 @@ const { bannerLabel, tagLabel, bannerLabelBack } = props
 
 <style scoped lang="scss">
 .card {
+
+--secondary-color: var(--lt-color-gray-600);
   position: relative;
   overflow: hidden;
   &__container {

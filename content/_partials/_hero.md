@@ -35,9 +35,9 @@ heroBtns:
 
 ---
 #title
-Welcome to Wetzlar Devs
+Welcome to Giessen-Wetzlar Devs
 #description
-We are a community of software developers in Wetzlar, Germany. Whether
+We are a community of software developers in Giessen-Wetzlar, Germany. Whether
 you love writing code or are just getting started, you are welcome
 here!
 ::
