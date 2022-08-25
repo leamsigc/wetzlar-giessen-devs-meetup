@@ -28,10 +28,14 @@ head:
 ---
 
 heroBtns:
-    - 'Join  our Slack'
     - 'Join our Meetup'
     - 'Become Patreon'
-    - 'Contribute Code'
+    -
+        textContent: 'Contribute Code'
+        link: 'https://github.com/leamsigc/wetzlar-giessen-devs-meetup'
+    -
+        textContent: 'Join  our Slack'
+        link: 'https://giessendev.slack.com/'
 
 ---
 #title

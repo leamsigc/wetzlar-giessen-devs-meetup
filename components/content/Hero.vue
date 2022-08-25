@@ -41,7 +41,7 @@ export default {
         <slot name="description" />
       </div>
       <div class="btn-container">
-        <SecondaryBtn v-for="btn in heroBtns" :key="btn" :text-content="btn" />
+        <SecondaryBtn v-for="btn in heroBtns" :key="btn" :text-content="btn.textContent ? btn.textContent : btn" :link="btn.link ? btn.link : '#'" />
       </div>
     </div>
   </section>
