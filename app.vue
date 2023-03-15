@@ -7,7 +7,7 @@ useSchemaOrg([
     name: 'Giessen and Wetzlar Developers meetup',
   }),
   // https://vue-schema-org.netlify.app/schema/webpage.html
-  defineWebPagePartial(),
+  defineWebPage(),
 ])
 </script>
 
