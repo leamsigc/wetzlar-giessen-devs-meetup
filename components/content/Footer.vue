@@ -18,12 +18,14 @@ const { data } = await useAsyncData('footer', () =>
 
 <template>
   <footer class="footer">
-    <ContentRenderer :value="data" class="flex justify-center">
-      <ContentRendererMarkdown :value="data" unwrap="p" />
-      <template #empty>
-        <p>No content found.</p>
-      </template>
-    </ContentRenderer>
+    <div class="flex justify-center">
+      <ContentRenderer v-if="data" :value="data">
+        <ContentRendererMarkdown :value="data" unwrap="p" />
+        <template #empty>
+          <p>No content found.</p>
+        </template>
+      </ContentRenderer>
+    </div>
     <div class="container">
       <div>
         <img src="/logo/DuckLogo.svg" alt="Wetzlar developers meetup" width="200px" height="100px" loading="lazy" decoding="async" quality="80" class="w-[150px] h-16 lg:h-12">

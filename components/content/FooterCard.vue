@@ -13,7 +13,7 @@
 </script>
 
 <template>
-  <div class="card prose" static lg:absolute>
+  <div class="card prose text-center mb-5">
     <h2 class="subtitle mt-unset">
       <Markdown :use="$slots.title" unwrap="p" />
     </h2>
@@ -31,7 +31,7 @@
   padding: 1rem;
   border-radius: 0.5rem;
   max-width: 600px;
-  width: 80%;
+  width: 100%;
 
   top: -8rem;
   z-index: 100;

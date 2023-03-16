@@ -15,8 +15,8 @@ const { data } = await useAsyncData('about', () =>
 )
 
 useHead({
-  ...data.value.head,
-  title: data.value.title,
+  ...data.value?.head,
+  title: data.value?.title,
 })
 definePageMeta({
   documentDriven: false,

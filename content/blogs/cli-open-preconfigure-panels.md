@@ -4,6 +4,10 @@ title: 'Boring of open the same programs every morning or every time that you ch
 description: 'Well i was in the same place that you so i did a little research and check what other team member where using to start the day faster. Giessen Wetzlar developers '
 draft: false
 navigation: false
+readTime: '5 MIN'
+tag: 'vuejs,cli,tmux'
+author: 'WRITTEN BY Ismael Garcia'
+publishedAt: '15-06-2022'
 
 
 image:  

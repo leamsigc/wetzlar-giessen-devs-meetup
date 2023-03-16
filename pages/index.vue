@@ -16,8 +16,8 @@ const { data } = await useAsyncData('hero', () =>
 )
 
 useHead({
-  ...data.value.head,
-  title: data.value.title,
+  ...data.value?.head,
+  title: data.value?.title,
 })
 definePageMeta({
   documentDriven: false,
@@ -27,42 +27,98 @@ definePageMeta({
 
 <template>
   <main>
-    <ContentRenderer :value="data">
+    <ContentRenderer v-if="data" :value="data">
       <ContentRendererMarkdown :value="data" unwrap="p" />
       <template #empty>
         <p>No content found.</p>
       </template>
     </ContentRenderer>
-    <div class="container p-y-10 px-4 xl:px-unset">
-      <div class="grid md:grid-cols-3 gap-4 gap-y-8 lg:gap-y-4 ">
-        <article
-          v-for="blog in blogs" :key="blog._path"
-          class="rounded p-unset  relative flex flex-col transition transform-gpu lg:hover:scale-110  shadow dark:bg-gray-700 dark:text-white"
-        >
-          <picture
-            v-if="blog.image" class="" :src="blog.image.src" quality="80"
-            rounded :img-attrs="{ class: 'object-cover   w-full h-full' }"
+    <main class="bg-slate-900 p-10 text-slate-50">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid grid-cols-1 gap-20 md:grid-cols-12">
+          <Nuxt-link
+            :to="blogs[0]._path" :title="blogs[0].title"
+            class="hover:bg-transparent hover:text-green hover:shadow-none mt-10 md:col-span-12 grid grid-cols-1 gap-20 md:grid-cols-12"
           >
-            <source :srcset="blog.image.src" media="(min-width: 600px)">
-            <img
-              object-cover w-full h-full :src="blog.image.src" :alt="blog.title" height="600"
-              width="600" loading="lazy" decoding="async"
-            >
-          </picture>
-          <div class="px-2 pt-2 flex flex-col flex-1">
-            <h2 text-lg font-bold uppercase text-gray-400>
-              {{ blog.title }}
-            </h2>
-            <p class=" text-base my-3 flex-1 opacity-55 ">
-              {{ blog.description }}
-            </p>
-          </div>
-          <Nuxt-link :to="blog._path" class="  hover:bg-transparent hover:text-green hover:shadow-none px-4 py-2">
-            Read More
+            <div class="p-4 md:col-span-5">
+              <header class="flex font-mono text-xl font-medium uppercase opacity-60">
+                <h2 class="text-teal-500">
+                  {{ blogs[0].tag }}
+                </h2>
+                <span class="ml-3 text-slate-400">{{ blogs[0].readTime }}</span>
+              </header>
+              <h3 class="mt-6 text-2xl font-bold leading-tight">
+                {{ blogs[0].title }}
+              </h3>
+              <section class="mt-10 text-lg leading-relaxed">
+                {{ blogs[0].description }}
+              </section>
+              <footer class="mt-5 font-mono font-medium uppercase text-slate-600">
+                <section>{{ blogs[0].author }}</section>
+                <section class="">
+                  {{ blogs[0].publishedAt }}
+                </section>
+              </footer>
+            </div>
+            <div class="md:col-span-7">
+              <picture
+                v-if="blogs[0].image" :src="blogs[0].image.src" quality="80"
+                rounded :img-attrs="{ class: 'object-cover  w-full' }"
+              >
+                <source :srcset="blogs[0].image.src" media="(min-width: 600px)">
+                <img
+                  object-contain w-full class="h-[500px]" :src="blogs[0].image.src" :alt="blogs[0].title" height="600"
+                  width="600" loading="lazy" decoding="async"
+                  role="presentation"
+                >
+              </picture>
+              <!-- <picture>
+                <source srcset="https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?format=webp&amp;width=100 100w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?format=webp&amp;width=200 200w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?format=webp&amp;width=400 400w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?format=webp&amp;width=800 800w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?format=webp&amp;width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?format=webp&amp;width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?format=webp&amp;width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4" type="image/webp">
+                <img role="presentation" loading="lazy" class="h-full w-full" src="https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4" srcset="https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4">
+              </picture> -->
+            </div>
           </Nuxt-link>
-        </article>
+          <div class="mt-10 md:col-span-12">
+            <h4 class="text-4xl leading-loose tracking-tighter">
+              Latest Articles
+            </h4>
+          </div>
+
+          <article v-for="blog in blogs" :key="blog._path" class="col-span-4">
+            <Nuxt-link :to="blog._path" :title="blog.title" class="hover:bg-transparent hover:text-green hover:shadow-none">
+              <picture
+                v-if="blog.image" :src="blog.image.src" quality="80"
+                rounded :img-attrs="{ class: 'object-cover  w-full' }"
+              >
+                <source :srcset="blog.image.src" media="(min-width: 600px)">
+                <img
+                  object-contain w-full h-45 :src="blog.image.src" :alt="blog.title" height="600"
+                  width="600" loading="lazy" decoding="async"
+                  role="presentation"
+                >
+              </picture>
+              <header class="flex font-mono font-medium uppercase opacity-60 mt-10">
+                <h6 class="text-teal-500">
+                  <span>{{ blog.tag }}</span>
+                  <span class="ml-3 text-slate-400">{{ blog.readTime }}</span>
+                </h6>
+              </header>
+              <h3 class="mt-6 text-lg font-bold leading-tight">
+                {{ blog.title }}
+              </h3>
+              <footer class="mt-5 font-mono font-medium uppercase text-slate-600">
+                <section>
+                  {{ blog.author }}
+                </section>
+                <section class="">
+                  {{ blog.publishedAt }}
+                </section>
+              </footer>
+            </Nuxt-link>
+          </article>
+        </div>
       </div>
-    </div>
+    </main>
   </main>
 </template>
 

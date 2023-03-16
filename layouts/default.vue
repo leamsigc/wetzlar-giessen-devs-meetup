@@ -13,7 +13,7 @@
 </script>
 
 <template>
-  <main text-center >
+  <main text-center>
     <Header />
     <section>
       <slot />

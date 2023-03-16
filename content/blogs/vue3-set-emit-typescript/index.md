@@ -4,6 +4,10 @@ title: 'vue3 how to set a emit defined?'
 description: ' vue3 how to set a emit defined?, composition api how to set a emit defined?, typescript vue3  set a emit defined?'
 draft: false
 navigation: false
+readTime: '3 MIN'
+tag: vuejs
+author: 'WRITTEN BY Ismael Garcia'
+publishedAt: '15-06-2022'
 
 
 image:  

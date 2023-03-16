@@ -6,6 +6,11 @@ description: 'We are a community of software developers in Wetzlar | Giessen, Ge
 draft: true
 navigation: true
 
+readTime: '3 MIN'
+tag: vuejs
+author: 'WRITTEN BY Ismael Garcia'
+publishedAt: '15-06-2022'
+
 
 
 image:  

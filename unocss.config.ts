@@ -16,11 +16,11 @@ export default defineConfig({
     ['image-container', 'absolute w-full h-full inset-0  object-cover'],
   ],
   presets: [
-    presetUno(),
     presetAttributify(),
     presetIcons({
       scale: 1.2,
     }),
+    presetUno(),
     presetTypography(),
     presetWebFonts({
       fonts: {

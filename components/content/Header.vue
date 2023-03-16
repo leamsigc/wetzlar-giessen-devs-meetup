@@ -61,10 +61,11 @@ const HandleToggleMenu = () => {
       </div>
       <nav
         lg:col-span-2 lg:flex
+        lg:translate-0
         :class="[`${menuState ? '-translate-y-0 top-20 opacity-100' : '-translate-y-full opacity-0 '}`]"
         class="absolute lg:static inset-0  overflow-y-scroll lg:overflow-y-unset z-10 w-screen lg:w-auto min-h-screen lg:min-h-auto transform transition-transform bg-[var(--main-color)] p-6 lg:p-unset text-white lg:opacity-100 lg:-translate-y-0 lg:ml-auto "
       >
-        <ul class="grid gap-5 text-left lg:grid-cols-6 lg:justify-center">
+        <ul class="grid gap-5 text-left lg:grid-cols-6 lg:justify-center ">
           <li v-for="link in nav" :key="link._path" class="grid content-center">
             <NuxtLink
               class="uppercase fw-bold block hover:text-green-400 transition-all lg:text-xs"
