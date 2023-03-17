@@ -54,6 +54,7 @@ const HandleToggleMenu = () => {
         </NuxtLink>
         <div grid content-center text-white lg:hidden @click="HandleToggleMenu">
           <button
+            aria-label="button"
             class=" d-block w-10 h-10 ml-auto transition-all duration-700 "
             :class="[`${menuState ? ' i-eva:close-outline' : 'i-bx-menu-alt-right'}`]"
           />

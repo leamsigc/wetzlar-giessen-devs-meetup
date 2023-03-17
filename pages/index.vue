@@ -33,19 +33,19 @@ definePageMeta({
         <p>No content found.</p>
       </template>
     </ContentRenderer>
-    <main class="bg-slate-900 p-10 text-slate-50">
+    <main class="bg-slate-900 p-3 md:p-10 text-slate-50">
       <div class="mx-auto max-w-7xl">
-        <div class="grid grid-cols-1 gap-20 md:grid-cols-12">
+        <div class="md:grid grid-cols-1 gap-20 md:grid-cols-12">
           <Nuxt-link
             :to="blogs[0]._path" :title="blogs[0].title"
-            class="hover:bg-transparent hover:text-green hover:shadow-none mt-10 md:col-span-12 grid grid-cols-1 gap-20 md:grid-cols-12"
+            class="hover:bg-transparent hover:text-green hover:shadow-none mt-10 col-span-1 md:col-span-12 grid grid-cols-1 gap-20 md:grid-cols-12"
           >
             <div class="p-4 md:col-span-5">
-              <header class="flex font-mono text-xl font-medium uppercase opacity-60">
+              <header class="flex font-mono text-xl font-medium uppercase opacity-80">
                 <h2 class="text-teal-500">
                   {{ blogs[0].tag }}
                 </h2>
-                <span class="ml-3 text-slate-400">{{ blogs[0].readTime }}</span>
+                <span class="ml-3 text-slate-200">{{ blogs[0].readTime }}</span>
               </header>
               <h3 class="mt-6 text-2xl font-bold leading-tight">
                 {{ blogs[0].title }}
@@ -53,7 +53,7 @@ definePageMeta({
               <section class="mt-10 text-lg leading-relaxed">
                 {{ blogs[0].description }}
               </section>
-              <footer class="mt-5 font-mono font-medium uppercase text-slate-600">
+              <footer class="mt-5 font-mono font-medium uppercase text-slate-400">
                 <section>{{ blogs[0].author }}</section>
                 <section class="">
                   {{ blogs[0].publishedAt }}
@@ -67,15 +67,11 @@ definePageMeta({
               >
                 <source :srcset="blogs[0].image.src" media="(min-width: 600px)">
                 <img
-                  object-contain w-full class="h-[500px]" :src="blogs[0].image.src" :alt="blogs[0].title" height="600"
+                  object-contain w-full class="h-[300px] md:h-[500px]" :src="blogs[0].image.src" :alt="blogs[0].title" height="600"
                   width="600" loading="lazy" decoding="async"
                   role="presentation"
                 >
               </picture>
-              <!-- <picture>
-                <source srcset="https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?format=webp&amp;width=100 100w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?format=webp&amp;width=200 200w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?format=webp&amp;width=400 400w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?format=webp&amp;width=800 800w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?format=webp&amp;width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?format=webp&amp;width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?format=webp&amp;width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4" type="image/webp">
-                <img role="presentation" loading="lazy" class="h-full w-full" src="https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4" srcset="https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F378bb0f7239543b0beeb6bfe5768f4f4">
-              </picture> -->
             </div>
           </Nuxt-link>
           <div class="mt-10 md:col-span-12">
@@ -97,16 +93,16 @@ definePageMeta({
                   role="presentation"
                 >
               </picture>
-              <header class="flex font-mono font-medium uppercase opacity-60 mt-10">
-                <h6 class="text-teal-500">
+              <header class="flex font-mono font-medium uppercase opacity-80 mt-10">
+                <h2 class="text-teal-500">
                   <span>{{ blog.tag }}</span>
                   <span class="ml-3 text-slate-400">{{ blog.readTime }}</span>
-                </h6>
+                </h2>
               </header>
               <h3 class="mt-6 text-lg font-bold leading-tight">
                 {{ blog.title }}
               </h3>
-              <footer class="mt-5 font-mono font-medium uppercase text-slate-600">
+              <footer class="mt-5 font-mono font-medium uppercase text-slate-400">
                 <section>
                   {{ blog.author }}
                 </section>

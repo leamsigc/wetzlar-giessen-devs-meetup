@@ -25,22 +25,32 @@ head:
     bodyAttrs:
         class: ''
     meta:
-        - name: 'keywords' 
-        - content: 'Giessen  and Wetzlar developer meetup group'
-        - name: 'robots'
-        - content: 'index, follow'    
-        - name: 'author'      
-        - content: 'Leamsigc'
+        -   name: 'keywords'
+            content: 'Giessen  and Wetzlar developer meetup group'
+        -   name: 'robots'
+            content: 'index, follow'
+        -   name: 'author' 
+            content: 'Leamsigc'
+        -   name: 'description'
+            content: 'We are a community of software developers in Wetzlar | Giessen, Germany. Whether you love writing code or are just getting started, you are welcome here! '
 
 ---
 ::Hero
 ---
 
 heroBtns:
-    - 'Join  our Slack'
-    - 'Join our Meetup'
-    - 'Become Patreon'
-    - 'Contribute Code'
+    -
+        textContent: 'Join our Meetup'
+        link: 'https://github.com/leamsigc/wetzlar-giessen-devs-meetup'
+    -
+        textContent: 'Become Patreon'
+        link: 'https://github.com/leamsigc/wetzlar-giessen-devs-meetup'
+    -
+        textContent: 'Contribute Code'
+        link: 'https://github.com/leamsigc/wetzlar-giessen-devs-meetup'
+    -
+        textContent: 'Join  our Slack'
+        link: 'https://giessendev.slack.com/'
 
 ---
 #title

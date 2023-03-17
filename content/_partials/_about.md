@@ -26,6 +26,8 @@ head:
             content: 'index, follow'    
         -   name: 'author'      
             content: 'Leamsigc'
+        -   name: 'description'
+            content: 'We are a community of software developers in Wetzlar | Giessen, Germany. Whether you love writing code or are just getting started, you are welcome here! '
 
 ---
 
@@ -37,11 +39,11 @@ We are a community of software developers in Giessen-Wetzlar, Germany. Whether y
 ::
 
 
-<div class='max-w-4xl mx-auto py-6 dark:text-white' max-w-5xl>
+<div class='max-w-4xl mx-auto py-6 dark:text-white px-3' max-w-5xl>
 
-<h3 class='font-bold text-lg mb-3'>
+<h2 class='font-bold text-lg mb-3'>
 We're a community of software developers in Giessen-Wetzlar!  <br/>We host professional networking and learning events for developers seeking to grow
-</h3>
+</h2>
 
 
 <div class='px-4 py-3'>

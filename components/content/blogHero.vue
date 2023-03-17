@@ -13,9 +13,10 @@
 
 interface PropsInterface {
   imageUrl: ''
+  imageAlt: ''
 }
 const props = defineProps<PropsInterface>()
-const { imageUrl } = toRefs(props)
+const { imageUrl, imageAlt } = toRefs(props)
 </script>
 
 <template>
@@ -41,6 +42,7 @@ const { imageUrl } = toRefs(props)
       <img
         class="object-cover w-full shadow-sm h-full rounded"
         :src="imageUrl"
+        :alt="imageAlt"
       >
     </div>
     <div class="blog-description text-left py-4">

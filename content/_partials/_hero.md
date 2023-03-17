@@ -20,6 +20,8 @@ head:
             content: 'index, follow'    
         -   name: 'author'      
             content: 'Leamsigc'
+        -   name: 'description'
+            content: 'We are a community of software developers in Wetzlar | Giessen, Germany. Whether you love writing code or are just getting started, you are welcome here! '
 
 ---
 
@@ -28,8 +30,12 @@ head:
 ---
 
 heroBtns:
-    - 'Join our Meetup'
-    - 'Become Patreon'
+    -
+        textContent: 'Join our Meetup'
+        link: 'https://github.com/leamsigc/wetzlar-giessen-devs-meetup'
+    -
+        textContent: 'Become Patreon'
+        link: 'https://github.com/leamsigc/wetzlar-giessen-devs-meetup'
     -
         textContent: 'Contribute Code'
         link: 'https://github.com/leamsigc/wetzlar-giessen-devs-meetup'

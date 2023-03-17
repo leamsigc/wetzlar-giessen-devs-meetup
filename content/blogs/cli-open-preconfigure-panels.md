@@ -22,12 +22,14 @@ head:
     bodyAttrs:
         class: ''
     meta:
+        - name: 'description' 
+          content: 'Boring of open the same programs every morning or every time that you change projects? Giessen Wetzlar developers'
         - name: 'keywords' 
-        - content: 'Boring of open the same programs every morning or every time that you change projects? Giessen Wetzlar developers'
+          content: 'Boring of open the same programs every morning or every time that you change projects? Giessen Wetzlar developers'
         - name: 'robots'
-        - content: 'index, follow'    
+          content: 'index, follow'    
         - name: 'author'      
-        - content: 'Leamsigc'
+          content: 'Leamsigc'
 
 ---
 
@@ -36,7 +38,7 @@ head:
 ::blogHero
 ---
 imageUrl: '/blog/tmuxp.png'
-
+imageAlt: 'Boring of open the same programs every morning or every time that you change projects'
 ---
 
 #title
@@ -105,13 +107,13 @@ windows:
           - element-desktop & bg
 ```
 
-### How to use
+## How to use
 
 Start the day by open the terminal and run the fallowing command
 
 > tmuxp load start #Remember the filename is start for my side so for you it would depend in the filename
 
-#### Recommendations
+### Recommendations
 
 - [tmux](https://github.com/tmux/tmux)
 - [bpytop](https://github.com/aristocratos/bpytop)

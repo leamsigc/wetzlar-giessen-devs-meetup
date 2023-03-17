@@ -66,7 +66,7 @@ const { bannerLabel, tagLabel, bannerLabelBack } = props
     transform: perspective(500px) rotateY(0deg);
     transition: all ease-in-out 0.5s;
     &--banner {
-      background: var(--main--strongColor);
+      // background: var(--main--strongColor);
 
       padding: 0.5rem 6rem;
       position: absolute;

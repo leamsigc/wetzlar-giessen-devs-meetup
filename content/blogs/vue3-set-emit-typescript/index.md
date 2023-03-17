@@ -22,18 +22,21 @@ head:
     bodyAttrs:
         class: ''
     meta:
+        - name: 'description' 
+          content: 'Giessen  and Wetzlar developer meetup group,vue3 how to set a emit defined?'
         - name: 'keywords' 
-        - content: 'Giessen  and Wetzlar developer meetup group,vue3 how to set a emit defined?'
+          content: 'Giessen  and Wetzlar developer meetup group,vue3 how to set a emit defined?'
         - name: 'robots'
-        - content: 'index, follow'    
+          content: 'index, follow'    
         - name: 'author'      
-        - content: 'Leamsigc'
+          content: 'Leamsigc'
 
 ---
 
 ::blogHero
 ---
 imageUrl: '/image.png'
+imageAlt: 'How to set up and emit event with typescript and the new vue3 composition api'
 
 ---
 
@@ -64,7 +67,7 @@ tagLabel: "Vuejs"
 
 
 #contentFront
-#### Set props interface vue3
+## Set props interface vue3
 While working with vue-3 and typescript we always need to define the props types,like if we have  card and that card component need a couple of porps right like title, sub-title, content
 ```ts
 interface propsInterface {
@@ -75,7 +78,7 @@ interface propsInterface {
 ```
 
 #contentBack
-#### Here is small an  example
+### Here is small an  example
 
 ```ts
 <script lang="ts" setup>
